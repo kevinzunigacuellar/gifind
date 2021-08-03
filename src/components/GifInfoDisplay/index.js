@@ -7,10 +7,10 @@ export default function GifInfoDisplay({ title, type, rating, url, id }) {
         <img
           src={url}
           alt={title}
-          className='object-contain w-full md:w-auto rounded-md shadow-md'
+          className='object-contain w-full sm:w-auto rounded-md shadow-lg'
         />
       </div>
-      <div className='flex flex-col justify-center pl-4 py-2 '>
+      <div className='flex flex-col justify-center pl-4 py-2'>
         <div className='font-sans font-semibold text-lg py-2 tracking-wider uppercase'>
           {title || 'No title'}
         </div>

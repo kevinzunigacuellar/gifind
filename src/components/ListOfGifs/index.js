@@ -2,7 +2,7 @@ import { useCallback, useRef } from 'react'
 import useGifs from 'hooks/useGifs'
 import Spinner from 'components/Spinner'
 import Gif from 'components/Gif'
-
+import NoGifsFound from 'components/NoGifsFound'
 export default function ListOfGifs({ query }) {
   const { gifs, loading, setPage } = useGifs({ query })
   const target = useRef(null)
@@ -23,7 +23,7 @@ export default function ListOfGifs({ query }) {
     },
     [loading, setPage]
   )
-
+  if (gifs[0] === undefined) return <NoGifsFound />
   return (
     <>
       {loading ? (

@@ -9,16 +9,12 @@ const fromApitoSingleGif = apiResponse => {
 }
 
 export default async function getSingleGif(id) {
-  try {
-    const res = await axios
-      .get(`https://api.giphy.com/v1/gifs/${id}`, {
-        params: {
-          api_key: API_KEY,
-        },
-      })
-      .then(fromApitoSingleGif)
-    return res
-  } catch (err) {
-    console.error(err)
-  }
+  const res = await axios
+    .get(`https://api.giphy.com/v1/gifs/${id}`, {
+      params: {
+        api_key: API_KEY,
+      },
+    })
+    .then(fromApitoSingleGif)
+  return res
 }

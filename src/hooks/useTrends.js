@@ -8,7 +8,7 @@ export default function useGifs() {
   useEffect(() => {
     setLoading(true)
     getTrendingList().then(trendingList => {
-      setTrending(trendingList.slice(0, 8))
+      setTrending(trendingList.slice(0, 7))
       setLoading(false)
     })
   }, [])

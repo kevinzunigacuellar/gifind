@@ -5,7 +5,7 @@ import useTrends from 'hooks/useTrends'
 export default function TrendLinks() {
   const { loading, trending } = useTrends()
   return (
-    <div className='flex flex-row flex-wrap space-x-2'>
+    <div className='flex flex-row flex-wrap space-x-2 justify-center'>
       {loading ? (
         <Spinner />
       ) : (

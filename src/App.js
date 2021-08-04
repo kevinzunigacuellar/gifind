@@ -14,7 +14,7 @@ function App() {
     <Router>
       <Layout>
         <Switch>
-          <Route path='/search/:query' component={SearchResults} />
+          <Route path='/search/:query/:rating?' component={SearchResults} />
           <Route path='/gif/:id' component={Details} />
           <Route exact={true} path='/' component={Home} />
           <Route path='/404' component={NotFound} />

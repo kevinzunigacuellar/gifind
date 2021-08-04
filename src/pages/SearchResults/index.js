@@ -4,14 +4,14 @@ import { useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 export default function SearchResults() {
-  const { query } = useParams()
+  const { query, rating } = useParams()
   return (
     <>
       <Helmet>
         <title>{`Gifind Search | ${query}`}</title>
       </Helmet>
       <SearchTitle>{`Search: ${query}`}</SearchTitle>
-      <ListOfGifs query={query} />
+      <ListOfGifs query={query} rating={rating} />
     </>
   )
 }

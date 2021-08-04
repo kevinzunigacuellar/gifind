@@ -2,8 +2,8 @@ import useGifs from 'hooks/useGifs'
 import Spinner from 'components/Spinner'
 import Gif from 'components/Gif'
 import { Waypoint } from 'react-waypoint'
-export default function ListOfGifs({ query }) {
-  const { gifs, loading, setPage } = useGifs({ query })
+export default function ListOfGifs({ query, rating }) {
+  const { gifs, loading, setPage } = useGifs({ query, rating })
 
   const loadMoreContent = () => {
     setPage(prevPage => prevPage + 1)

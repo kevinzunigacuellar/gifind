@@ -3,7 +3,7 @@ import getGifs from 'services/getGifs'
 
 const INITIAL_PAGE = 0
 
-export default function useGifs({ query }) {
+export default function useGifs({ query, rating }) {
   const [loading, setLoading] = useState(false)
   const [gifs, setGifs] = useState([])
   const [page, setPage] = useState(INITIAL_PAGE)
@@ -11,20 +11,20 @@ export default function useGifs({ query }) {
 
   useEffect(() => {
     setLoading(true)
-    getGifs({ query }).then(gifs => {
+    getGifs({ query, rating }).then(gifs => {
       setGifs(gifs)
       setLoading(false)
     })
-  }, [query])
+  }, [query, rating])
 
   useEffect(() => {
     if (page === INITIAL_PAGE) return
     setLoadingNextPage(true)
-    getGifs({ query, page }).then(nextGifs => {
+    getGifs({ query, page, rating }).then(nextGifs => {
       setGifs(prevGifs => prevGifs.concat(nextGifs))
     })
     setLoadingNextPage(false)
-  }, [page, query])
+  }, [page, query, rating])
 
   return { loading, gifs, setPage, loadingNextPage }
 }

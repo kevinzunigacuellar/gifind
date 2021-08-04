@@ -14,6 +14,7 @@ export default async function getGifs({
   query = 'morty',
   limit = 25,
   page = 0,
+  rating = 'g',
 } = {}) {
   try {
     const response = await axios
@@ -23,7 +24,7 @@ export default async function getGifs({
           q: query,
           limit: limit,
           offset: page * limit,
-          rating: 'g',
+          rating: rating,
           lang: 'en',
         },
       })

@@ -12,7 +12,7 @@ const fromApitoResponseGifs = apiResponse => {
 
 export default async function getGifs({
   query = 'morty',
-  limit = 15,
+  limit = 25,
   page = 0,
 } = {}) {
   try {

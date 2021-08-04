@@ -7,8 +7,6 @@ export default function Layout({ children }) {
       <Logo />
       <BrowserBar />
       <div className='container mx-auto py-2'>{children}</div>
-      <div>foter</div>
-      <div>git push example</div>
     </div>
   )
 }

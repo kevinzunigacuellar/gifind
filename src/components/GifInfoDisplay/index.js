@@ -1,7 +1,14 @@
 import DetailText from 'components/DetailText'
-import Copy from 'components/Icons/Copy'
+import { DuplicateIcon, ClipboardCheckIcon } from '@heroicons/react/outline'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import useCopied from 'hooks/useCopied'
+
 export default function GifInfoDisplay({ title, type, rating, url, id }) {
+  const { copied, setCopied } = useCopied()
+
+  const handleCopied = () => {
+    setCopied(true)
+  }
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 py-2 md:py-8'>
       <div className='flex justify-end'>
@@ -19,9 +26,13 @@ export default function GifInfoDisplay({ title, type, rating, url, id }) {
         <DetailText>Type: {type}</DetailText>
         <DetailText>Rating: {rating}</DetailText>
         <div className='mt-1'>
-          <CopyToClipboard text={url}>
-            <button className='p-2 rounded-md focus:outline-none bg-gray-100 hover:bg-gray-200 focus:ring-2 focus:ring-offset-1 focus:ring-gray-800 cursor-pointer '>
-              <Copy />
+          <CopyToClipboard text={url} onCopy={handleCopied}>
+            <button className='p-2 rounded-md bg-gray-100 hover:bg-gray-200 border-2 border-transparent hover:border-gray-800 cursor-pointer'>
+              {copied ? (
+                <ClipboardCheckIcon className='h-6 w-6' />
+              ) : (
+                <DuplicateIcon className='h-6 w-6' />
+              )}
             </button>
           </CopyToClipboard>
         </div>

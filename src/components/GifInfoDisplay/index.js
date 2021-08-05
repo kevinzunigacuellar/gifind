@@ -19,7 +19,7 @@ export default function GifInfoDisplay({ title, type, rating, url, id }) {
         />
       </div>
       <div className='flex flex-col justify-center pl-4 py-2'>
-        <div className='font-sans font-semibold text-lg py-2 tracking-wider uppercase'>
+        <div className='font-sans font-semibold text-lg py-2 tracking-wider uppercase dark:text-gray-300'>
           {title || 'No title'}
         </div>
         <DetailText>ID: {id}</DetailText>
@@ -27,7 +27,7 @@ export default function GifInfoDisplay({ title, type, rating, url, id }) {
         <DetailText>Rating: {rating}</DetailText>
         <div className='mt-1'>
           <CopyToClipboard text={url} onCopy={handleCopied}>
-            <button className='p-2 rounded-md bg-gray-100 hover:bg-gray-200 border-2 border-transparent hover:border-gray-800 cursor-pointer'>
+            <button className='p-2 mt-2 rounded-md bg-gray-200 dark:bg-gray-800 dark:text-gray-400  dark:hover:border-gray-500 dark:hover:text-gray-200 hover:bg-gray-300 border-2 border-transparent hover:border-gray-800 cursor-pointer'>
               {copied ? (
                 <ClipboardCheckIcon className='h-6 w-6' />
               ) : (

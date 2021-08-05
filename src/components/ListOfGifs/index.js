@@ -15,7 +15,7 @@ export default function ListOfGifs({ query, rating }) {
         return (
           <div
             key={id}
-            className='rounded-lg overflow-hidden border-4 border-blue-600 border-opacity-0 hover:border-opacity-90 max-h-80'>
+            className='rounded-lg overflow-hidden border-4 border-blue-600 dark:hover:border-purple-600 border-opacity-0 hover:border-opacity-90 max-h-80'>
             <Gif id={id} url={url} />
             {index === gifs.length - 3 && (
               <Waypoint onEnter={loadMoreContent} />

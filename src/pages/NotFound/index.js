@@ -4,7 +4,7 @@ export default function NotFound() {
   const { url, id } = gifInfo
   return (
     <div className='flex flex-col items-center'>
-      <p className='font-sans font-semibold text-2xl py-2 uppercase tracking-wider'>
+      <p className='font-sans font-semibold text-2xl py-2 uppercase tracking-wider dark:text-gray-300'>
         Error 404: Not found
       </p>
       <div>

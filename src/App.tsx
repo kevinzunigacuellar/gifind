@@ -1,7 +1,9 @@
 import { Routes, Route } from 'solid-app-router'
-import Home from './pages/Home'
-import Header from './components/Header'
-import Search from './pages/Search'
+import { lazy } from 'solid-js'
+
+const Header = lazy(() => import('./components/Header'))
+const Search = lazy(() => import('./pages/Search'))
+const Home = lazy(() => import('./pages/Home'))
 
 function App() {
   return (

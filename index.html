@@ -5,27 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
-    <title>Solid App</title>
+    <title>Gifind | Search gifs</title>
   </head>
-  <body class="w-full h-full">
+  <body class="w-full h-full dark:bg-zinc-900 bg-white max-w-4xl mx-auto p-6">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div
-      id="root"
-      class="w-full h-full flex flex-col justify-center items-center dark:bg-gray-900 transition-colors"
-    ></div>
-    <script>
-      const theme = localStorage.getItem('theme')
-      if (
-        theme === 'dark' ||
-        (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark')
-        window.localStorage.setItem('theme', 'dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-        window.localStorage.setItem('theme', 'light')
-      }
-    </script>
+    <div id="root"></div>
+    <script src="/src/scripts/darkmode.js"></script>
     <script src="/src/index.jsx" type="module"></script>
   </body>
 </html>

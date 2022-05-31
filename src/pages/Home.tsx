@@ -1,7 +1,11 @@
+import TrendingGifs from '../components/TrendingGifs'
+import TrendingSearches from '../components/TrendingSearches'
+
 export default function Home() {
   return (
     <>
-      <p class="py-10">we are home</p>
+      <TrendingSearches />
+      <TrendingGifs />
     </>
   )
 }

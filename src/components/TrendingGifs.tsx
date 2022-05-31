@@ -24,7 +24,7 @@ export default function TrendingGifs() {
   return (
     <section class="mt-8">
       <Subtitle text="🚀 Trending gifs" />
-      <div class="flex gap-2 overflow-x-auto rounded-lg overflow-hidden">
+      <div class="flex gap-2 overflow-x-auto flex-col sm:flex-row rounded-lg overflow-hidden">
         <Suspense fallback={<TrendingGifsPlaceholder />}>
           <For each={trendingGifs()}>
             {gif => (
@@ -33,7 +33,7 @@ export default function TrendingGifs() {
                 alt={gif.id}
                 width={gif.width}
                 height={gif.height}
-                class="rounded-lg"
+                class="rounded-lg w-full sm:w-auto"
                 loading="lazy"
               />
             )}

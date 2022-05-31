@@ -29,7 +29,7 @@ export default function Search() {
   return (
     <>
       <Subtitle text="🔍 Search results" />
-      <div class="grid grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <Suspense fallback={null}>
           <For each={gifs()}>
             {gif => (
@@ -38,7 +38,7 @@ export default function Search() {
                 alt={gif.id}
                 width={gif.width}
                 height={gif.height}
-                class="rounded-lg object-cover h-full"
+                class="rounded-lg w-full object-cover h-full"
                 loading="lazy"
               />
             )}

@@ -1,5 +1,6 @@
 import { createResource, For, Suspense } from 'solid-js'
 import Subtitle from './Subtitle'
+import { Link } from 'solid-app-router'
 
 const fetchTrendingSearches = async () => {
   const res = await fetch(
@@ -19,12 +20,11 @@ export default function TrendingSearches() {
         <Suspense fallback={<TrendingSearchesPlaceholder />}>
           <For each={trendingSearches()}>
             {search => (
-              <a
-                href={`/search/${search}`}
-                class="inline-block px-4 py-1 border text-zinc-500 hover:shadow dark:hover:shadow-black/50 dark:border-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300 hover:text-zinc-900 rounded-lg"
-              >
-                {search}
-              </a>
+              <Link href={`/search/${search}`}>
+                <p class="inline-block px-4 py-1 border text-zinc-500 hover:shadow dark:hover:shadow-black/50 dark:border-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300 hover:text-zinc-900 rounded-lg">
+                  {search}
+                </p>
+              </Link>
             )}
           </For>
         </Suspense>

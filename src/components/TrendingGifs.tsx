@@ -24,7 +24,7 @@ export default function TrendingGifs() {
   return (
     <section class="mt-8">
       <Subtitle text="🚀 Trending gifs" />
-      <div class="flex gap-2 overflow-x-auto flex-col sm:flex-row rounded-lg overflow-hidden">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Suspense fallback={<TrendingGifsPlaceholder />}>
           <For each={trendingGifs()}>
             {gif => (
@@ -47,10 +47,10 @@ export default function TrendingGifs() {
 function TrendingGifsPlaceholder() {
   return (
     <>
-      <div class="h-[200px] w-60 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-[200px] w-60 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-[200px] w-60 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-[200px] w-60 bg-slate-300 rounded-lg animate-pulse"></div>
+      <div class="w-64 h-48 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="w-64 h-48 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="w-64 h-48 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="w-64 h-48 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
     </>
   )
 }

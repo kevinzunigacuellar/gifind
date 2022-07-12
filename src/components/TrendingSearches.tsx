@@ -36,18 +36,18 @@ export default function TrendingSearches() {
 function TrendingSearchesPlaceholder() {
   return (
     <>
-      <div class="h-9 w-32 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-9 w-60 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-9 w-48 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-9 w-32 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-9 w-60 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-9 w-48 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-9 w-60 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-9 w-32 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-9 w-32 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-9 w-48 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-9 w-60 bg-slate-300 rounded-lg animate-pulse"></div>
-      <div class="h-9 w-48 bg-slate-300 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-32 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-60 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-48 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-32 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-60 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-48 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-60 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-32 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-32 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-48 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-60 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
+      <div class="h-9 w-48 bg-zinc-300 dark:bg-zinc-800 rounded-lg animate-pulse"></div>
     </>
   )
 }

@@ -33,7 +33,7 @@ export default function TrendingGifs() {
                 alt={gif.id}
                 width={gif.width}
                 height={gif.height}
-                class="rounded-lg w-full sm:w-auto"
+                class="rounded-lg w-full object-cover h-full"
                 loading="lazy"
               />
             )}

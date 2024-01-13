@@ -17,3 +17,7 @@ pnpm install
 pnpm dev
 
 ```
+
+## Creditos 
+
+Curso gratis de react de [midudev](https://github.com/midudev)
